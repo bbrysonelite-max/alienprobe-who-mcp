@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.bbrysonelite-max/alienprobe-who-mcp",
+  "description": "Company name, domain or LEI to its GLEIF legal entity, $0.05 via x402 on Base. Spend caps.",
+  "repository": {
+    "url": "https://github.com/bbrysonelite-max/alienprobe-who-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@alienprobe/who-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PRIVATE_KEY",
+          "description": "Hex private key of the paying wallet (USDC on Base). Optional: the free who_terms tool works without it.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "MAX_USD_PER_CALL",
+          "description": "Per-call spend cap in USD (default 0.10)",
+          "isRequired": false
+        },
+        {
+          "name": "MAX_USD_PER_SESSION",
+          "description": "Per-process spend cap in USD (default 1.00)",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "websiteUrl": "https://lookups.alienprobe.ai/openapi.json"
+}
