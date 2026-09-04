@@ -1,0 +1,53 @@
+{
+  "name": "alienprobe-who-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.bbrysonelite-max/alienprobe-who-mcp",
+  "description": "MCP server for the Alien Probe `who` lookup: one legal-entity fact (LEI, legal name, jurisdiction, status), paid per call with x402 on Base. Free refusals, hard spend caps.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Brent Bryson",
+  "homepage": "https://github.com/bbrysonelite-max/alienprobe-who-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbrysonelite-max/alienprobe-who-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bbrysonelite-max/alienprobe-who-mcp/issues"
+  },
+  "main": "src/index.mjs",
+  "bin": {
+    "alienprobe-who-mcp": "./src/index.mjs"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "SPEC.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "start": "node src/index.mjs",
+    "test": "node --test test/contract.test.mjs",
+    "smoke": "node test/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "x402",
+    "lei",
+    "gleif",
+    "legal-entity",
+    "kyb",
+    "agent-payments"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@x402/evm": "2.25.0",
+    "@x402/fetch": "2.25.0",
+    "viem": "2.56.3",
+    "zod": "4.5.4"
+  }
+}
