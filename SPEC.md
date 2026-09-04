@@ -57,7 +57,7 @@ Guards add `spend_cap_exceeded` (`scope`, `price_usd`, `cap_usd`, `spent_usd_thi
 Three lines in `claude_desktop_config.json` or Cursor's `mcp.json`:
 
 ```json
-{ "mcpServers": { "who": { "command": "npx", "args": ["-y", "alienprobe-who-mcp"],
+{ "mcpServers": { "who": { "command": "npx", "args": ["-y", "@alienprobe/who-mcp"],
   "env": { "PRIVATE_KEY": "0x...", "MAX_USD_PER_SESSION": "1.00" } } } }
 ```
 
@@ -65,7 +65,7 @@ Three lines in `claude_desktop_config.json` or Cursor's `mcp.json`:
 
 Order matters: the official registry feeds the aggregators.
 
-1. **npm** — `npm publish --access public`, unscoped `alienprobe-who-mcp`, so `npx alienprobe-who-mcp` works. Set already: `"mcpName": "io.github.bbrysonelite-max/alienprobe-who-mcp"` plus `repository`/`homepage`; the registry verifies ownership through `mcpName`.
+1. **npm** — `npm publish --access public`, unscoped `alienprobe-who-mcp`, so `npx @alienprobe/who-mcp` works. Set already: `"mcpName": "io.github.bbrysonelite-max/alienprobe-who-mcp"` plus `repository`/`homepage`; the registry verifies ownership through `mcpName`.
 2. **Official MCP Registry** — `brew install mcp-publisher` (or the tarball at `github.com/modelcontextprotocol/registry/releases/latest`), then `mcp-publisher init` → edit `server.json` (`registryType:"npm"`, `transport:{type:"stdio"}`, `PRIVATE_KEY` as `isSecret`) → `login github` → `publish`. Docs: https://github.com/modelcontextprotocol/registry, docs/modelcontextprotocol-io/quickstart.mdx.
 3. **PulseMCP** — https://www.pulsemcp.com/submit. Direct submissions are **paused**; the page says listings are picked up automatically from the official registry, "the best first step even when we are not paused." Step 2 is the whole action.
 4. **Glama** — https://glama.ai/mcp/servers, "Add MCP Server": repo URL + name + description, GitHub OAuth, submitter must hold write/admin on the repo. Automated license/security/health checks pass in minutes. Optional `glama.json` steers indexing.

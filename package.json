@@ -1,5 +1,5 @@
 {
-  "name": "alienprobe-who-mcp",
+  "name": "@alienprobe/who-mcp",
   "version": "0.1.0",
   "mcpName": "io.github.bbrysonelite-max/alienprobe-who-mcp",
   "description": "MCP server for the Alien Probe `who` lookup: one legal-entity fact (LEI, legal name, jurisdiction, status), paid per call with x402 on Base. Free refusals, hard spend caps.",
@@ -49,5 +49,8 @@
     "@x402/fetch": "2.25.0",
     "viem": "2.56.3",
     "zod": "4.5.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

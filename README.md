@@ -14,7 +14,7 @@ Two tools:
 Three lines. Claude Desktop (`claude_desktop_config.json`) or Cursor (`.cursor/mcp.json`):
 
 ```json
-{ "mcpServers": { "who": { "command": "npx", "args": ["-y", "alienprobe-who-mcp"],
+{ "mcpServers": { "who": { "command": "npx", "args": ["-y", "@alienprobe/who-mcp"],
   "env": { "PRIVATE_KEY": "0x...", "MAX_USD_PER_SESSION": "1.00" } } } }
 ```
 
